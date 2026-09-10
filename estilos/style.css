@@ -1,0 +1,180 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* HEADER & NAVEGAÇÃO */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+nav a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Linha do underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Quando passar o mouse */
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* =========================================
+   HERO SECTION (BACKGROUND EM VÍDEO)
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ocupa 100% da altura do viewport */
+    min-height: 100dvh; /* Suporte dinâmico à altura em navegadores mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Impede barras de rolagem causadas pelo vídeo */
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+/* VÍDEO COMO BACKGROUND EXCLUSIVO DA HERO */
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche toda a Hero sem distorcer o vídeo */
+    z-index: 0; /* Camada inferior, atrás de todo o conteúdo */
+    pointer-events: none; /* Não interfere em cliques ou toques */
+    will-change: transform;
+    transform: translateZ(0); /* Aceleração de hardware na GPU para máxima fluidez */
+}
+
+/* CAMADA ESCURA (OVERLAY) PARA CONTRASTE E LEGIBILIDADE */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%); /* Contraste equilibrado para realçar a animação com legibilidade */
+    z-index: 1; /* Fica entre o vídeo e o texto */
+    pointer-events: none; /* Cliques atravessam diretamente */
+}
+
+/* CONTEÚDO DA HERO SOBREPOSTO AO VÍDEO */
+.hero-conteudo {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    z-index: 2;
+    color: #ffffff;
+    max-width: 750px;
+    text-align: left;
+}
+
+.hero-conteudo p:first-of-type {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #00bcd4;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.hero-conteudo h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    font-weight: 800;
+}
+
+.hero-conteudo p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #00bcd4;
+}
+
+/* CONTEÚDO PRINCIPAL */
+#conteudo {
+    padding: 5rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+}
+
+#conteudo h2 {
+    font-size: 2.2rem;
+    color: #111111;
+}
+
+#conteudo p {
+    font-size: 1.15rem;
+    color: black;
+}
+#txt-1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.metadinha{
+    background-image: url(../imagens/img-metadinha.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.419);
+
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+.metadinha:hover{
+    transform: translateY(-2px);
+    transition: .3s;
+}
+#txt-2{
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+#txt-2  strong{
+    color: #00bcd4;
+}
+/* FOOTER */
+footer {
+
+}

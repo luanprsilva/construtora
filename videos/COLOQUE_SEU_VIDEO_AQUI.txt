@@ -1,0 +1,2 @@
+Coloque seu arquivo de vídeo aqui, por exemplo: hero-video.mp4
+Formatos recomendados: MP4 (H.264/AAC) para maior compatibilidade com navegadores desktop e mobile.
