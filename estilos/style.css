@@ -137,6 +137,8 @@ nav a:hover::after {
     text-align: center;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    background-color: #111111;
+
 }
 
 #conteudo h2 {
@@ -151,6 +153,10 @@ nav a:hover::after {
 #txt-1{
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+}
+#txt-1  p , h3{
+    color: white;
 }
 .metadinha{
     background-image: url(../imagens/img-metadinha.png);
@@ -171,10 +177,50 @@ nav a:hover::after {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
 }
+#txt-2  p , h3{
+    color: white;
+}
 #txt-2  strong{
     color: #00bcd4;
 }
+#txt-3{
+    grid-row: 3 / 4;
+    grid-column: 1 /4 ;
+    margin-top: 30px;
+    color: white;
+}
+#txt-3 h3{
+    color: #00bcd4;
+    text-shadow: 2px 2px 3px #004048;
+}
 /* FOOTER */
 footer {
-
+background-color: rgb(39, 39, 39);
+height: 50vh;
+width: 100vw;
 }
+footer h2{
+    display: flex;
+    justify-content: center;
+    color: rgb(188, 188, 188);
+}
+label{
+color: rgb(188, 188, 188);
+margin-left: 30px;
+}
+#botoes{
+    margin-left: 70px;
+    padding: 10px;
+}
+#botoes2{
+    padding: 5px;
+}
+#botoes > input:hover{
+    color: #004048;
+}
+input{
+    border-radius: 10px;
+    background-color: #00bcd4;
+    box-shadow: 2px 2px 5px black;
+}
+
